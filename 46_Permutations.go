@@ -1,4 +1,4 @@
-package main
+package L46
 
 import "fmt"
 
