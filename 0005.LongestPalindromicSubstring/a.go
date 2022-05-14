@@ -1,4 +1,4 @@
-package L5
+package a5
 
 func longestPalindrome(s string) string {
 	result := ""

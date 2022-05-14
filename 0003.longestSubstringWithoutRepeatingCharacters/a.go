@@ -1,4 +1,4 @@
-package L3
+package a3
 
 import "strings"
 
@@ -31,8 +31,4 @@ func lengthOfLongestSubstring(s string) int {
 	}
 
 	return res
-}
-
-func main() {
-	lengthOfLongestSubstring("aabbcc")
 }

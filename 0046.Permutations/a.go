@@ -1,4 +1,4 @@
-package L46
+package a46
 
 import "fmt"
 
@@ -9,7 +9,7 @@ func permute(nums []int) [][]int {
 		return result
 	}
 	for i := 0; i < len(nums); i++ {
-		temp := make([]int, len(nums), len(nums))
+		temp := make([]int, len(nums))
 		copy(temp, nums)
 		temp[i] = temp[len(temp)-1]
 		temp = temp[:len(temp)-1]
@@ -20,8 +20,4 @@ func permute(nums []int) [][]int {
 	}
 
 	return result
-}
-
-func main() {
-	fmt.Println(permute([]int{1, 2, 3}))
 }

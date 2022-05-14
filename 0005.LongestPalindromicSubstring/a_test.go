@@ -1,4 +1,4 @@
-package L5
+package a5
 
 import (
 	"testing"
