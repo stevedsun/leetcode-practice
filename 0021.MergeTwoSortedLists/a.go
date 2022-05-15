@@ -17,38 +17,11 @@ func mergeTwoLists(list1 *ListNode, list2 *ListNode) *ListNode {
 		return p1
 	}
 
-	var result *ListNode
-	var resHead *ListNode
-
 	if p1.Val < p2.Val {
-		result = p1
-		resHead = result
-		p1 = p1.Next
+		p1.Next = mergeTwoLists(p1.Next, p2)
+		return p1
 	} else {
-		result = p2
-		resHead = result
-		p2 = p2.Next
+		p2.Next = mergeTwoLists(p1, p2.Next)
+		return p2
 	}
-
-	for p1 != nil && p2 != nil {
-		if p1.Val < p2.Val {
-			result.Next = p1
-			result = result.Next
-			p1 = p1.Next
-		} else {
-			result.Next = p2
-			result = result.Next
-			p2 = p2.Next
-		}
-	}
-
-	if p1 == nil && p2 != nil {
-		result.Next = p2
-	}
-
-	if p2 == nil && p1 != nil {
-		result.Next = p1
-	}
-
-	return resHead
 }
