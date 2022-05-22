@@ -24,7 +24,6 @@ func isPalindrome(head *ListNode) bool {
 	var p1, p2, p3 *ListNode
 	p1 = nil
 	p2 = slowPtr
-	p3 = slowPtr.Next
 
 	for p2 != nil {
 		p3 = p2.Next
